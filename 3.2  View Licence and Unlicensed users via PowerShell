@@ -1,7 +1,0 @@
--connect-MicrosoftTeams
--Connect-AzureAD
--Connect-MsolService
-For License users 
--Get-MsolUser -All
-For Unlicensed users
--Get-MsolUser -All -UnlicensedUsersOnly
