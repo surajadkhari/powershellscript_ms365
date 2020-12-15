@@ -1,0 +1,9 @@
+
+Connect-MicrosoftTeams
+#Owner
+Import-Csv -Path "C:\Users\Surat Adhikari\st.csv" | foreach{Add-TeamUser -GroupId ecc02000-2e28-4ad4-96d2-ea604ce6b78e -Role Owner -user $_.email}
+#Member
+Import-Csv -Path "C:\Users\suraj\OneDrive\Desktop\st.csv" | foreach{Add-TeamUser -GroupId 9544b0b7-c0a7-45d4-90fb-2c0cfbac34a6 -Role Member -user $_.email}
+ 
+st.csv formate
+email
