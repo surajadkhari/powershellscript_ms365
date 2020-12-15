@@ -25,3 +25,7 @@ Import-Csv -Path "C:\Users\suraj\OneDrive\Desktop\create_user.csv" | foreach {Ne
 #Create_user.csv formate
 
 UserPrincipalName	FirstName	LastName	DisplayName	UsageLocation	AccountSkuId	Password	Title	Department	MobilePhone
+
+
+#To find out about the available licenses and quantities left:
+ Get-MsolAccountSku | Select AccountSkuId,ActiveUnits,ConsumedUnits
