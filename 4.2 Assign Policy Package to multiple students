@@ -1,0 +1,27 @@
+-Connect Teams
+-Create CSV(Comma-Separated Values) with fill ID “UserId” and list of students  and save in Desktop
+-Use the code below change 
+$dataSetFilePath=” where you have your file”
+-PackageName Policypakcage_Name
+
+
+
+#Teacher:
+$dataSetFilePath = "C:\Users\suraj\policy.csv"
+  $dataSet = Import-Csv "$($dataSetFilePath)" -Header UserId –delimiter ","
+  foreach($line in $dataSet)
+  {
+     $userId = $line.UserId
+     Write-Host $userId
+Grant-CsUserPolicyPackage -Identity $userId -PackageName Education_HigherEducationStudent
+}
+
+#Students
+$dataSetFilePath = "C:\Users\suraj\policy.csv"
+  $dataSet = Import-Csv "$($dataSetFilePath)" -Header UserId –delimiter ","
+  foreach($line in $dataSet)
+  {
+     $userId = $line.UserId
+     Write-Host $userId
+Grant-CsUserPolicyPackage -Identity $userId -PackageName Education_HigherEducationStudent
+}
