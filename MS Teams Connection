@@ -1,5 +1,0 @@
-
-#Teams connection
-Install-Module -Name MicrosoftTeams -AllowClobber 
- Import-Module MicrosoftTeams
- Connect-MicrosoftTeams
