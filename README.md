@@ -1,7 +1,8 @@
 # powershellscript_ms365
 
-#Method for using powershell to connect to skype business online(new connection)
+Method for using powershell to connect to skype business online(new connection)
 (10/1/2020)
+
 •	Kindly use the below link to download and install the Skype for Business connector module and then restart your computer if prompted. 
 https://www.microsoft.com/download/details.aspx?id=39366 
 •	Open your power shell ISE as Administrator and run the following commands below if your account is not using multifactor authentication. Kindly run this line by line. 
