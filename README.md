@@ -1,2 +1,0 @@
-# powershellscript_ms365
-
