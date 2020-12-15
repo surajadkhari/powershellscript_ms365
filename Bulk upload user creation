@@ -1,0 +1,27 @@
+https://docs.microsoft.com/en-us/microsoft-365/enterprise/create-user-accounts-with-microsoft-365-powershell?view=o365-worldwide
+
+#For first time connect MS Admin
+
+Install-Module -Name MSonline
+Import-Module MSOnline
+$msolCred = Get-Credential
+Connect-MsolService –Credential $msolCred
+
+#Second time 
+
+$msolCred = Get-Credential
+Connect-MsolService –Credential $msolCred
+   
+https://docs.microsoft.com/en-us/microsoft-365/enterprise/create-user-accounts-with-microsoft-365-powershell?view=o365-worldwide
+
+2.Fiter Data with duplicate
+3.Place data in Import CSV File(Test.csv)
+4.Run
+Import-Csv -Path "C:\Users\suraj\OneDrive\Desktop\create_user.csv" | foreach {New-MsolUser -DisplayName $_.DisplayName -FirstName $_.FirstName -LastName $_.LastName -UserPrincipalName $_.UserPrincipalName -UsageLocation $_.UsageLocation -LicenseAssignment $_.AccountSkuId -Password $_.Password -Title $_.Title -Department $_.Department -MobilePhone $_.MobilePhone} | Export-Csv -Path "C:\Users\suraj\OneDrive\Desktop\cl.csv
+
+
+5.Check out the cl1.csv for created account 
+
+#Create_user.csv formate
+
+UserPrincipalName	FirstName	LastName	DisplayName	UsageLocation	AccountSkuId	Password	Title	Department	MobilePhone
