@@ -25,3 +25,7 @@ $dataSetFilePath = "C:\Users\suraj\policy.csv"
      Write-Host $userId
 Grant-CsUserPolicyPackage -Identity $userId -PackageName Education_HigherEducationStudent
 }
+  
+  
+#Plicy csv formate
+UserId
