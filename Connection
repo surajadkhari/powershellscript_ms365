@@ -11,8 +11,3 @@ Skype for Business Online administrators are responsible for managing policies. 
 3.$userCredential = Get-Credential
 $sfbSession = New-CsOnlineSession -Credential $userCredential
 4.Import-PSSession $sfbSession
-
-Teams connection
-Install-Module -Name MicrosoftTeams -AllowClobber 
- Import-Module MicrosoftTeams
- Connect-MicrosoftTeams
